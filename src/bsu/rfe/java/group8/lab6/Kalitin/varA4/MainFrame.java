@@ -67,6 +67,19 @@ public class MainFrame extends JFrame {
         resumeMenuItem = controlMenu.add(resumeAction);
         resumeMenuItem.setEnabled(false);
 
+        Action pauseGreenballs = new AbstractAction("Остановить зеленые шары") {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                field.pause1();
+                pause1MenuItem.setEnabled(false);
+                resumeMenuItem.setEnabled(true);
+            }
+        };
+        pause1MenuItem = controlMenu.add(pauseGreenballs);
+        pause1MenuItem.setEnabled(false);
+        // Добавить в центр граничной компоновки поле Field
+        getContentPane().add(field, BorderLayout.CENTER);
+
     }
 
     public static void main(String[] args) {
