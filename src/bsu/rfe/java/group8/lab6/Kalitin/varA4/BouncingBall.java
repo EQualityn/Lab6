@@ -38,6 +38,7 @@ public class BouncingBall implements Runnable{
         if (speed > MAX_SPEED){
             speed = MAX_SPEED;
         }
+
         // Начальное направление скорости тоже случайно,
         // угол в пределах от 0 до 2PI
         double angle = Math.random()*2*Math.PI;
